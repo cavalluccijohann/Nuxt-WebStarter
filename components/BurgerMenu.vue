@@ -23,7 +23,7 @@ const items = [
   <div>
     <div
         @click="open = !open"
-        class="flex flex-col justify-between w-8 h-7 cursor-pointer"
+        class="flex flex-col justify-between w-6 h-5 cursor-pointer"
     >
       <div
           class="w-full h-1 bg-main rounded-full"
@@ -42,7 +42,7 @@ const items = [
     <Transition name="slide-fade">
       <div
           v-if="open"
-          class="fixed left-0 w-full bg-main/20 z-10 height-menu backdrop-blur-2xl"
+          class="fixed left-0 w-full bg-main/20 z-10 height-menu blur-bg"
       >
         <div class="flex flex-col items-center justify-center gap-6 sm:gap-10 p-2">
           <ItemNavBar v-for="item in items" :key="item.name" :item="item" />
@@ -60,8 +60,8 @@ const items = [
     width: 100%;
   }
   100% {
-    transform: rotate(45deg) translateY(14px) translateX(3px);
-    width: 120%;
+    transform: rotate(45deg) translateY(8px) translateX(3px);
+    width: 100%;
   }
 }
 @keyframes rotateRight {
@@ -70,8 +70,8 @@ const items = [
     width: 100%;
   }
   100% {
-    transform: rotate(-45deg) translateY(-14px) translateX(3px);
-    width: 120%;
+    transform: rotate(-45deg) translateY(-9px) translateX(3px);
+    width: 100%;
   }
 }
 @keyframes rotateRightReset {
@@ -127,9 +127,9 @@ const items = [
 }
 
 .height-menu {
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3.5rem);
   transition: height 0.3s ease-out;
-  top: 4rem;
+  top: 3.5rem;
 }
 
 .slide-fade-enter-active {

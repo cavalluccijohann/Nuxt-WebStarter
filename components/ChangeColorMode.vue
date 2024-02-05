@@ -9,7 +9,7 @@ const toggleColorMode = () => {
 <template>
     <SvgoLightDark
         @click="toggleColorMode"
-        class="w-7 h-7 cursor-pointer mr-7 text-primary-color select-none text-main hover:text-accent transition-all duration-300"
+        class="w-6 h-6 cursor-pointer text-primary-color select-none text-main hover:text-accent transition-all duration-300"
         :class="{
           'animate-rotate180': $colorMode.preference === 'dark',
           'animate-rotate0': $colorMode.preference === 'light',
