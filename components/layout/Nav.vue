@@ -18,9 +18,12 @@ const items = [
 
 <template>
   <div>
-    <div class="hidden md:flex fixed bg-main/10 w-full items-center justify-between py-3 px-4">
-      <div class="flex flex-1 items-center">
+    <div class="flex fixed bg-main/10 w-full items-center justify-between py-3 px-4 blur-bg">
+      <div class="hidden lg:flex flex-1 items-center">
         <ItemNavBar v-for="item in items" :key="item.name" :item="item" />
+      </div>
+      <div class="flex flex-1 items-center lg:hidden">
+        <BurgerMenu />
       </div>
       <div class="flex">
         <img src="/assets/logo.png" class="w-10 h-10 flex-1" />

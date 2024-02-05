@@ -9,3 +9,7 @@ html.dark {
   --background-color: 2, 4, 32;
   --text-color: 255, 255, 255;
 }
+
+.blur-bg {
+  backdrop-filter: blur(10px);
+}
