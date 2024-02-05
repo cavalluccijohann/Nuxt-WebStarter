@@ -1,0 +1,11 @@
+html {
+  --accent-color: 0, 220, 130;
+}
+html.light {
+  --background-color: 255, 255, 255;
+  --text-color: 2, 4, 32;
+}
+html.dark {
+  --background-color: 2, 4, 32;
+  --text-color: 255, 255, 255;
+}

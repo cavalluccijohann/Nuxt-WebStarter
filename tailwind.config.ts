@@ -23,12 +23,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "color-text": withOpacity("--text-color"),
-        "neutral-color": "#414141",
-        "primary-color": withOpacity("--primary"),
-        "secondary-color": withOpacity("--secondary"),
-        "text-color-primary": "var(--text-color-primary)",
+        main: withOpacity("--text-color"),
+        accent: withOpacity("--accent-color"),
+        secondary: withOpacity("--background-color"),
       },
+      textColor: {
+        main: withOpacity("--text-color"),
+        accent: withOpacity("--accent-color"),
+        secondary: withOpacity("--secondary-color"),
+      },
+      }
     },
-  },
 };
