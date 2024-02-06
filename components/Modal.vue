@@ -16,6 +16,7 @@ defineProps({
         <slot name="header"></slot>
         <div class="w-11/12 h-[1px] bg-secondary rounded-2xl"></div>
         <slot name="body"></slot>
+        <div class="w-11/12 h-[1px] bg-secondary rounded-2xl my-3"></div>
         <slot name="footer"></slot>
       </div>
     </div>
