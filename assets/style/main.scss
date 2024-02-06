@@ -1,5 +1,6 @@
 html {
   --accent-color: 0, 220, 130;
+  --header-height: 3.5rem;
 }
 html.light {
   --background-color: 255, 255, 255;
@@ -12,4 +13,10 @@ html.dark {
 
 .blur-bg {
   backdrop-filter: blur(10px);
+}
+
+.height-menu {
+  height: calc(100vh - var(--header-height));
+  transition: height 0.3s ease-out;
+  top: var(--header-height);
 }

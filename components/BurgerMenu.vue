@@ -126,11 +126,7 @@ const items = [
   animation: rotateRight 0.3s ease-out forwards;
 }
 
-.height-menu {
-  height: calc(100vh - 3.5rem);
-  transition: height 0.3s ease-out;
-  top: 3.5rem;
-}
+
 
 .slide-fade-enter-active {
   transition: all 0.2s ease-out;

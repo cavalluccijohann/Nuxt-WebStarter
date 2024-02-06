@@ -24,6 +24,7 @@ defineProps({
       ]"
       :aria-label="'Go to ' + item.name + ' profile'"
     >
+      <span class="sr-only">go to the {{ item.name }} profile</span>
       {{ item.name }}
     </NuxtLink>
   </div>

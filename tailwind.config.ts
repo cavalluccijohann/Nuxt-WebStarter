@@ -30,7 +30,7 @@ module.exports = {
       textColor: {
         main: withOpacity("--text-color"),
         accent: withOpacity("--accent-color"),
-        secondary: withOpacity("--secondary-color"),
+        secondary: withOpacity("--background-color"),
       },
       }
     },
