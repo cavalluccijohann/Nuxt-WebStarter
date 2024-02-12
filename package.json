@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "blanked": "^0.0.10",
+    "blanked": "latest",
     "nuxt": "^3.10.0",
     "nuxt-svgo": "^4.0.0",
     "sass": "^1.70.0",

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const openModal = ref(false);
 const singUp = ref(false);
+
 </script>
 
 <template>
@@ -10,9 +11,13 @@ const singUp = ref(false);
       :class="openModal ? 'text-accent' : 'text-main'"
       :aria-label="'Login'"
   ></span>
-  <Modal v-model="openModal">
+  {{openModal}}
+  <Modal
+      v-model="openModal"
+  >
     <template #header>
-      <h1 class="text-2xl font-bold text-secondary my-3">Login</h1>
+      <h1 v-if="!singUp" class="text-2xl font-bold text-secondary my-3">Login</h1>
+      <h1 v-else class="text-2xl font-bold text-secondary my-3">Sign up</h1>
     </template>
     <template #body>
       <Transition mode="out-in" name="bounce">
@@ -121,12 +126,12 @@ const singUp = ref(false);
       </Transition>
     </template>
     <template #footer>
-      <div class="flex w-3/4 justify-end mb-3 gap-3">
+      <div class="flex flex-col md:flex-row w-3/4 justify-end mb-3 gap-3">
         <button
             v-if="!singUp"
             type="submit"
             form="form-login"
-            class=" w-1/2 bg-accent text-main p-2 rounded-md hover:bg-accent/90 transition-all duration-300 px-5"
+            class="w-full md:w-1/2 bg-accent text-main p-2 rounded-md hover:bg-accent/90 transition-all duration-300 px-5"
         >
           Login
         </button>
@@ -134,14 +139,14 @@ const singUp = ref(false);
             v-if="singUp"
             @click="singUp = !singUp"
             form="form-login"
-            class=" w-1/2 bg-accent text-main p-2 rounded-md hover:bg-accent/90 transition-all duration-300 px-5"
+            class="w-full md:w-1/2 bg-main text-accent border-2 border-accent p-2 rounded-md hover:text-accent/90 hover:border-accent/90 transition-all duration-300 px-5"
         >
           Login
         </button>
         <button
             v-if="!singUp"
             @click="singUp = !singUp"
-            class="w-1/2 bg-main text-accent border-2 border-accent p-2 rounded-md hover:text-accent/90 hover:border-accent/90 transition-all duration-300 px-5"
+            class="w-full md:w-1/2 bg-main text-accent border-2 border-accent p-2 rounded-md hover:text-accent/90 hover:border-accent/90 transition-all duration-300 px-5"
         >
           Sign up
         </button>
@@ -149,9 +154,10 @@ const singUp = ref(false);
             v-if="singUp"
             @click=""
             form="form-signup"
-            class="w-1/2 bg-main text-accent border-2 border-accent p-2 rounded-md hover:text-accent/90 hover:border-accent/90 transition-all duration-300 px-5"
+            class="w-full md:w-1/2 bg-accent text-main p-2 rounded-md hover:bg-accent/90 transition-all duration-300 px-5 flex flex-row items-center justify-center"
         >
           Sign up
+          <span class="i-lucide-chevron-right-circle w-5 h-5 text-main ml-2"></span>
         </button>
       </div>
     </template>
